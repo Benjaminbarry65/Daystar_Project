@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
 def a_index(request):
-    my_response = "This is the About Us page"
-    respo = HttpResponse(my_response)
-    return respo
+    template = loader.get_template('about.html')
+    return HttpResponse(template.render()) 
