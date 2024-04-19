@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'contact',
+    'sitters',
 ]
 
 MIDDLEWARE = [
