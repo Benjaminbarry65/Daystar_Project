@@ -20,6 +20,7 @@ from home.views import index
 from about.views import aboutindex
 from contact.views import contactindex
 from sitters.views import sitterHome
+from sitters.views import addSitter
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path("about/", aboutindex, name="about"),
     path("contact/", contactindex, name="contact"),
     path("sitters/", sitterHome, name="sitters"),
+    path("addsitter/", addSitter, name="addsitter"),
 ]

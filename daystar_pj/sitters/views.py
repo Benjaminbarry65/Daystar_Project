@@ -6,16 +6,21 @@ from django.template import loader
 #create view functions for CRUD.
 
 def sitterHome(request):
-    return HttpResponse("sitterHome")
+    template = loader.get_template('sitters.html')
+    return HttpResponse(template.render())
 
 def addSitter(request):
-    return HttpResponse("addSitter")
+    template = loader.get_template('addsitter.html')
+    return HttpResponse(template.render())
 
 def editSitter(request):
-    return HttpResponse("editSitter")
+    template = loader.get_template('editsitter.html')
+    return HttpResponse(template.render())
 
 def deleteSitter(request):
-    return HttpResponse("deleteSitter")
+    template = loader.get_template('deletesitter.html')
+    return HttpResponse(template.render())
 
 def readSitter(request):
-    return HttpResponse("readSitter")                
+    template = loader.get_template('readsitter.html')
+    return HttpResponse(template.render())                
