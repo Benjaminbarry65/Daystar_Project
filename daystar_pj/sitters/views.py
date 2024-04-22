@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .models import Sitter
 
 # Create your views here.
 #create view functions for CRUD.
 
 def sitterHome(request):
+    all_sitters = Sitter.objects.all()
     template = loader.get_template('sitters.html')
     return HttpResponse(template.render())
 

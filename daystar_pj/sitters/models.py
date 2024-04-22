@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Sitter(models.Model):
     Name = models.CharField(max_length=100)
-    age = models.IntegerField()
+    Gender = models.CharField(max_length=25)
     dateAdmited = models.DateTimeField()
-    status = models.IntegerField(default=0) 
+    contact = models.CharField(max_length=25)
+    status = models.BooleanField(default=False) 
